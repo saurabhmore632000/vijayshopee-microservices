@@ -15,7 +15,7 @@ public class NotificationListener {
         log.info("=================================================");
         log.info("🚀 NEW KAFKA MESSAGE INTERCEPTED!");
         log.info("Order ID: {}", event.getOrderNumber());
-        log.info("Customer Email: {}", event.getCustomerEmail());
+        log.info("Customer Email is: {}", event.getCustomerEmail());
         log.info("Total Amount Received: ₹{}", event.getTotalAmount());
         log.info("=================================================");
     }
