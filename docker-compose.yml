@@ -13,8 +13,6 @@ services:
     container_name: kafka
     depends_on:
       - zookeeper
-#    ports:
-#      - "9093:9092"
     environment:
       KAFKA_BROKER_ID: 1
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
@@ -36,6 +34,7 @@ services:
 
   api-gateway:
     build: ./api-gateway
+    image: saurabh632000/vijayshopee-api-gateway:latest
     container_name: vijayshopee-api-gateway
     ports:
       - "8060:8060"
@@ -45,6 +44,7 @@ services:
 
   auth-service:
     build: ./auth-service
+    image: saurabh632000/vijayshopee-auth-service:latest
     container_name: vijayshopee-auth-service
     ports:
       - "8081:8081"
@@ -61,6 +61,7 @@ services:
 
   product-service:
     build: ./product-service
+    image: saurabh632000/vijayshopee-product-service:latest
     container_name: vijayshopee-product-service
     ports:
       - "8082:8082"
@@ -76,6 +77,7 @@ services:
 
   order-service:
     build: ./order-service
+    image: saurabh632000/vijayshopee-order-service:latest
     container_name: vijayshopee-order-service
     ports:
       - "8083:8083"
@@ -91,6 +93,7 @@ services:
 
   notification-service:
     build: ./notification-service
+    image: saurabh632000/vijayshopee-notification-service:latest
     container_name: vijayshopee-notification-service
     ports:
       - "8084:8084"
@@ -102,6 +105,7 @@ services:
 
   payment-service:
     build: ./payment-service
+    image: saurabh632000/vijayshopee-payment-service:latest
     container_name: vijayshopee-payment-service
     ports:
       - "8085:8085"
@@ -117,6 +121,7 @@ services:
 
   shipping-service:
     build: ./shipping-service
+    image: saurabh632000/vijayshopee-shipping-service:latest
     container_name: vijayshopee-shipping-service
     ports:
       - "8086:8086"
@@ -132,6 +137,7 @@ services:
 
   inventory-service:
     build: ./inventory-service
+    image: saurabh632000/vijayshopee-inventory-service:latest
     container_name: vijayshopee-inventory-service
     ports:
       - "8087:8087"
